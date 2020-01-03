@@ -1,0 +1,192 @@
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    background: rgb(245, 246, 255);
+}
+
+.container { 
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    margin: 10px auto;
+    box-shadow: 0 20px 40px #00000025;
+    background: #fbfbfb;
+    padding: 50px;
+}
+.audio-container { 
+    margin-top: 50px !important;
+    padding: 10px;
+    margin: 0px auto;
+    /* background: rgb(190, 190, 190); */
+    background: #404040;
+    border: 1px solid #00000070;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.audio-title { 
+    padding: 10px 0;
+    font-size: 1.25rem;
+    cursor: default;
+    color: #fff;
+}
+
+.audio-content { 
+    /* background: rgb(136, 120, 135); */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.audio-content > div { 
+    /* background: rgb(218, 218, 218); */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.audio-content > div i, .time-play, .download-audio a { 
+    color: #fff;
+    font-size: 1rem;
+    transition: 300ms ease;
+    cursor: pointer;
+    font-style: normal;
+    text-decoration: none;
+}
+.audio-content > div i:hover, .time-play:hover, .download-audio:hover a{ 
+    color: #08f;
+}
+
+.speed-audio { 
+    position: relative;
+}
+
+.speed-audio>i{ 
+   text-transform: capitalize;
+}
+
+.speed-audio-select { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 22px;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: 300ms ease;
+    cursor: pointer;
+    font-size: .85rem;
+    background: #414141;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+.speed-audio-select li { 
+    transition: 300ms ease;
+    text-align: center;
+}
+.speed-audio-select li::after { 
+    content: "x";
+}
+.speed-audio-select li:hover, .speed-audio-select li:hover i { 
+   color: #08f;
+}
+.active-volume-speed { 
+    color: #08f;
+}
+.speed-audio:hover .speed-audio-select { 
+    transform: scaleY(1);
+}
+.speed-audio-select li i { 
+    font-size: 0.85rem;
+    text-transform: lowercase
+}
+
+.volume .volume-progress { 
+    transform: scaleX(0);
+    width: 0;
+    transition: 300ms ease;
+    transform-origin: right;
+
+}
+.volume:hover .volume-progress { 
+    transform: scaleX(1);
+    width: 100px;
+}
+
+.main-progress { 
+    flex-grow: 1;
+    
+}
+.main-progress progress { 
+    width: 100%;
+    
+}
+*[id*= 'upload'] { 
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+progress, .volume-progress {
+    /* стилевые правила Moz для полосы */
+    background: #505050;
+    border: none;
+    outline: none;
+    height: 10px;
+    border-radius: 5px;
+    margin: auto 0;
+    cursor: pointer;
+
+  }
+  progress::-webkit-progress-bar, .volume-progress::-webkit-progress-bar  {
+    /* стилевые правила для полосы в Chrome*/
+    background: #505050;
+    border: none;
+    outline: none;
+    height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  progress::-webkit-progress-value, .volume-progress::-webkit-progress-value {
+    /* стилевые правила для прогресса Chrome*/
+    background:  #08f;
+    border: none;
+    outline: none;
+    height: 10px;
+    border-radius: 5px;
+    
+  }
+  progress::-moz-progress-bar, .volume-progress::-moz-progress-bar {
+    /* стилевые правила для прогресса Moz*/
+    background: #08f;
+    border: none;
+    outline: none;
+    height: 10px;
+    border-radius: 5px;
+    
+  }
